@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.0)
+
+include("HunterGate.cmake")
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.19.60.tar.gz"
+    SHA1 "65a35a1937e0b42dbe261349c25acd7ae71c125e"
+)
+
+project(Hunter)
+
+hunter_add_package("@PACKAGE@")
+
+message("Install directory: ${HUNTER_INSTALL_PREFIX}")
